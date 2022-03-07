@@ -70,4 +70,7 @@ plt.title(file_name.split('/')[-1])
 plt.xlabel('Frequency [GHz]')
 plt.ylabel('Capacity [pF]')
 plt.legend()
+
+plt.savefig('plot.png')
 plt.show()
+
