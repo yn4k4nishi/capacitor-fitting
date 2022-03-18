@@ -72,4 +72,5 @@ for file_name in files:
 
     plt.savefig('img/{}.png'.format(file_name.split('/')[-1].split('.csv')[0]))
     # plt.show()
+    plt.close()
 
