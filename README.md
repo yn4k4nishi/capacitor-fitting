@@ -19,4 +19,5 @@ note : use only simsurfing data
 |[GJM1555C1H2R1BB01](img/GJM1555C1H2R1BB01_InProduction.png) | 2.1 pF |
 |[GJM1555C1H2R2BB01](img/GJM1555C1H2R2BB01_InProduction.png) | 2.2 pF |
 |[GJM1555C1HR50BB01](img/GJM1555C1HR50BB01_InProduction.png) | 0.5 pF |
-
+|[GJM1555C1HR60BB01](img/GJM1555C1HR60BB01_InProduction.png) | 0.6 pF |
+|[GJM1555C1HR70BB01](img/GJM1555C1HR70BB01_InProduction.png) | 0.7 pF |
