@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 import glob
+from update_list import get_capacity_from_csv
 
 
 freq_min = 0.5e9
@@ -18,8 +19,6 @@ for file_name in files:
     print("================================================================")
     print("- File path : {}".format(file_name))
     print("- Frequency : {} ~ {} [GHz]".format(freq_min/1e9, freq_max/1e9))
-    print("================================================================")
-
 
     with open(file_name) as f:
         reader = csv.reader(f)
@@ -60,7 +59,8 @@ for file_name in files:
         return a + b * np.exp(np.multiply(f, c) - d )
 
     # curve fitting
-    popt, pcov = curve_fit(func, freq, cap, p0=[1, 1, 0.01, 1])
+    a0 = get_capacity_from_csv(file_name)
+    popt, pcov = curve_fit(func, freq, cap, p0=[a0, 1, 0.01, 1], maxfev=5000)
 
 
     plt.scatter(freq, cap, s=5, c='blue', zorder=2)
