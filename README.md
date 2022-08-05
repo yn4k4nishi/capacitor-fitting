@@ -6,6 +6,7 @@ note : use only simsurfing data
 | label | value |
 | ---   | ---   |
 | [GJM1555C1H1R0BB01_InProduction.png](img/GJM1555C1H1R0BB01_InProduction.png) | 1.0pF |
+| [GJM1555C1H1R1BB01_InProduction.png](img/GJM1555C1H1R1BB01_InProduction.png) | 1.1pF |
 | [GJM1555C1H1R2BB01_InProduction.png](img/GJM1555C1H1R2BB01_InProduction.png) | 1.2pF |
 | [GJM1555C1H1R7BB01_InProduction.png](img/GJM1555C1H1R7BB01_InProduction.png) | 1.7pF |
 | [GJM1555C1H1R8BB01_InProduction.png](img/GJM1555C1H1R8BB01_InProduction.png) | 1.8pF |
