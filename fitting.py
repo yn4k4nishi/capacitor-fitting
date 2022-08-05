@@ -88,7 +88,7 @@ def fitting(file_name, freq_min, freq_max, save_img=True):
     if save_img:
         plt.scatter(freq, cap, s=5, c='blue', zorder=2)
         # plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2E} + {:.2E}*exp(freq[GHz] * {:.2E} + {:.2E})'.format(*popt))
-        func_str = '{:.3f} + {:.3e}*tan(freq/1e9 * {:.3e} + {:.3f})'.format(*popt)
+        func_str = '{:.3f} + {:.3e} * tan( freq/1e9 * {:.3e} + {:.3f} )'.format(*popt)
         plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label=func_str)
         plt.title(file_name.split('/')[-1])
         plt.xlabel('Frequency [GHz]')
