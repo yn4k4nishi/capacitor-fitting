@@ -7,8 +7,8 @@ import glob
 from update_list import get_capacity_from_csv
 
 
-freq_min = 0.5e9
-freq_max = 4.5e9
+freq_min = 3e9
+freq_max = 6e9
 
 files = glob.glob("csv/*")
 for file_name in files:
@@ -56,15 +56,17 @@ for file_name in files:
 
     # fit function
     def func(f, a, b, c, d):
-        return a + b * np.exp(np.multiply(f, c) - d )
+        return a + b * np.tan( np.multiply(f, c) + d )
+        return a + b * np.exp( np.multiply(f, c) + d )
 
     # curve fitting
     a0 = get_capacity_from_csv(file_name)
-    popt, pcov = curve_fit(func, freq, cap, p0=[a0, 1, 0.01, 1], maxfev=5000)
+    popt, pcov = curve_fit(func, freq, cap, p0=[a0, 1, 1e-4, 0], maxfev=5000)
 
 
     plt.scatter(freq, cap, s=5, c='blue', zorder=2)
-    plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2E} + {:.2E}*exp(freq[GHz] * {:.2E} - {:.2E})'.format(*popt))
+    # plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2E} + {:.2E}*exp(freq[GHz] * {:.2E} + {:.2E})'.format(*popt))
+    plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2f} + {:.4f}*tan(freq[GHz] * {:.2f} + {:.2f})'.format(*popt))
     plt.title(file_name.split('/')[-1])
     plt.xlabel('Frequency [GHz]')
     plt.ylabel('Capacity [pF]')
