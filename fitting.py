@@ -66,7 +66,7 @@ for file_name in files:
 
     plt.scatter(freq, cap, s=5, c='blue', zorder=2)
     # plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2E} + {:.2E}*exp(freq[GHz] * {:.2E} + {:.2E})'.format(*popt))
-    plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2f} + {:.4f}*tan(freq[GHz] * {:.2f} + {:.2f})'.format(*popt))
+    plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2f} + {:.2e}*tan(freq[GHz] * {:.2e} + {:.2f})'.format(*popt))
     plt.title(file_name.split('/')[-1])
     plt.xlabel('Frequency [GHz]')
     plt.ylabel('Capacity [pF]')
