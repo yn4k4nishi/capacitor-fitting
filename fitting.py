@@ -7,8 +7,8 @@ import glob
 from update_list import get_capacity_from_csv
 
 
-freq_min = 3e9
-freq_max = 6e9
+freq_min = 2.5e9
+freq_max = 7e9
 
 files = glob.glob("csv/*")
 for file_name in files:
@@ -66,7 +66,7 @@ for file_name in files:
 
     plt.scatter(freq, cap, s=5, c='blue', zorder=2)
     # plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2E} + {:.2E}*exp(freq[GHz] * {:.2E} + {:.2E})'.format(*popt))
-    plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2f} + {:.2e}*tan(freq[GHz] * {:.2e} + {:.2f})'.format(*popt))
+    plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.3f} + {:.2e}*tan(freq[GHz] * {:.2e} + {:.3f})'.format(*popt))
     plt.title(file_name.split('/')[-1])
     plt.xlabel('Frequency [GHz]')
     plt.ylabel('Capacity [pF]')
