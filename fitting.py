@@ -1,20 +1,40 @@
 import sys
 import csv
+import re
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 import glob
-from update_list import get_capacity_from_csv
 
 
-freq_min = 2.5e9
-freq_max = 7e9
+def get_capacity_from_csv(file_name):
+    a0 = 0
+    t = file_name.split('csv/GJM1555C1')[1].split('BB01_InProduction.csv')[0]
+    t = re.split('[HR]', t)[1:]
+    if t[0] == '':
+        pass
+    else:
+        a0 += float(t[0])
+    a0 += 0.1 * int(t[1][0])
 
-files = glob.glob("csv/*")
-for file_name in files:
+    return a0
+
+def get_capacity_from_png(file_name):
+    a0 = 0
+    t = file_name.split('img/GJM1555C1')[1].split('BB01_InProduction.png')[0]
+    t = re.split('[HR]', t)[1:]
+    if t[0] == '':
+        pass
+    else:
+        a0 += float(t[0])
+    a0 += 0.1 * int(t[1][0])
+
+    return a0
+
+def fitting(file_name, freq_min, freq_max, save_img=True):
 
     if file_name.split('.')[-1] != 'csv':
-        continue
+        return
 
     print("================================================================")
     print("- File path : {}".format(file_name))
@@ -57,22 +77,27 @@ for file_name in files:
     # fit function
     def func(f, a, b, c, d):
         return a + b * np.tan( np.multiply(f, c) + d )
-        return a + b * np.exp( np.multiply(f, c) + d )
+        # return a + b * np.exp( np.multiply(f, c) + d )
 
     # curve fitting
     a0 = get_capacity_from_csv(file_name)
     popt, pcov = curve_fit(func, freq, cap, p0=[a0, 1, 1e-4, 0], maxfev=5000)
 
+    img_file = ''
 
-    plt.scatter(freq, cap, s=5, c='blue', zorder=2)
-    # plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2E} + {:.2E}*exp(freq[GHz] * {:.2E} + {:.2E})'.format(*popt))
-    plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.3f} + {:.2e}*tan(freq[GHz] * {:.2e} + {:.3f})'.format(*popt))
-    plt.title(file_name.split('/')[-1])
-    plt.xlabel('Frequency [GHz]')
-    plt.ylabel('Capacity [pF]')
-    plt.legend()
+    if save_img:
+        plt.scatter(freq, cap, s=5, c='blue', zorder=2)
+        # plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label='{:.2E} + {:.2E}*exp(freq[GHz] * {:.2E} + {:.2E})'.format(*popt))
+        func_str = '{:.3f} + {:.3e} * tan( freq/1e9 * {:.3e} + {:.3f} )'.format(*popt)
+        plt.plot(freq, func(freq, *popt), lw=4, c='red', zorder=1, label=func_str)
+        plt.title(file_name.split('/')[-1])
+        plt.xlabel('Frequency [GHz]')
+        plt.ylabel('Capacity [pF]')
+        plt.legend()
 
-    plt.savefig('img/{}.png'.format(file_name.split('/')[-1].split('.csv')[0]))
-    # plt.show()
-    plt.close()
+        plt.savefig('img/{}.png'.format(file_name.split('/')[-1].split('.csv')[0]))
+        # plt.show()
+        plt.close()
+
+    return a0, func_str, img_file
 
