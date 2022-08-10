@@ -95,7 +95,8 @@ def fitting(file_name, freq_min, freq_max, save_img=True):
         plt.ylabel('Capacity [pF]')
         plt.legend()
 
-        plt.savefig('img/{}.png'.format(file_name.split('/')[-1].split('.csv')[0]))
+        img_file = 'img/{}.png'.format(file_name.split('/')[-1].split('.csv')[0])
+        plt.savefig(img_file)
         # plt.show()
         plt.close()
 
