@@ -76,8 +76,8 @@ def fitting(file_name, freq_min, freq_max, save_img=True):
 
     # fit function
     def func(f, a, b, c, d):
-        return a + b * np.tan( np.multiply(f, c) + d )
         # return a + b * np.exp( np.multiply(f, c) + d )
+        return a + b * np.tan( np.multiply(f, c) + d )
 
     # curve fitting
     a0 = get_capacity_from_csv(file_name)
