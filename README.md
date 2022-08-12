@@ -12,6 +12,8 @@ note : use only simsurfing data
 | [GJM1555C1H1R4BB01_InProduction.csv]() | 1.4pF | `0.530 + 2.416e-02 * tan( freq/1e9 * 4.985e-03 + 1.535 )` |
 | [GJM1555C1H1R5BB01_InProduction.csv]() | 1.5pF | `0.502 + 1.014e-01 * tan( freq/1e9 * 1.953e-02 + 1.434 )` |
 | [GJM1555C1H1R6BB01_InProduction.csv]() | 1.6pF | `0.529 + 1.287e-01 * tan( freq/1e9 * 2.396e-02 + 1.408 )` |
+| [GJM1555C1HR10BB01_InProduction.csv]() | 0.1pF | `0.097 + 2.347e+00 * tan( freq/1e9 * 5.657e-04 + -0.000 )` |
+| [GJM1555C1HR20BB01_InProduction.csv]() | 0.2pF | `0.170 + 2.476e-04 * tan( freq/1e9 * 7.743e-04 + 1.561 )` |
 | [GJM1555C1HR30BB01_InProduction.csv]() | 0.3pF | `0.241 + 2.062e-04 * tan( freq/1e9 * 3.490e-04 + 1.567 )` |
 | [GJM1555C1HR40BB01_InProduction.csv]() | 0.4pF | `0.292 + 5.101e-04 * tan( freq/1e9 * 5.044e-04 + 1.565 )` |
 | [GJM1555C1HR50BB01_InProduction.csv]() | 0.5pF | `0.355 + 7.115e-04 * tan( freq/1e9 * 5.527e-04 + 1.565 )` |
