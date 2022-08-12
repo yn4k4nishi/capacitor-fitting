@@ -1,6 +1,6 @@
-import re
 import glob
 from fitting import fitting
+
 
 if __name__ == "__main__":
 
