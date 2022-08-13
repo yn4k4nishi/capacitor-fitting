@@ -81,7 +81,9 @@ def fitting(file_name, freq_min, freq_max, save_img=True):
 
     # curve fitting
     a0 = get_capacity_from_csv(file_name)
-    popt, pcov = curve_fit(func, freq, cap, p0=[a0, 1, 1e-4, 0], maxfev=5000)
+    # popt, pcov = curve_fit(func, freq, cap, p0=[a0, 0.1, 1e-4, 1.5], maxfev=int(1e6))
+    popt, pcov = curve_fit(func, freq, cap, p0=[0.3, 0, 1e-4, 1.5], maxfev=int(1e5))
+    
 
     img_file = ''
 
