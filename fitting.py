@@ -9,7 +9,7 @@ import glob
 
 def get_capacity_from_csv(file_name):
     a0 = 0
-    t = file_name.split('csv/GJM1555C1')[1].split('BB01_InProduction.csv')[0]
+    t = file_name.split('C1')[1].split('BB01_InProduction.csv')[0]
     t = re.split('[HR]', t)[1:]
     if t[0] == '':
         pass
@@ -21,7 +21,7 @@ def get_capacity_from_csv(file_name):
 
 def get_capacity_from_png(file_name):
     a0 = 0
-    t = file_name.split('img/GJM1555C1')[1].split('BB01_InProduction.png')[0]
+    t = file_name.split('C1')[1].split('BB01_InProduction.png')[0]
     t = re.split('[HR]', t)[1:]
     if t[0] == '':
         pass

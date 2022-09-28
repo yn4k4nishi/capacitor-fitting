@@ -21,3 +21,6 @@ note : use only simsurfing data
 | [GJM1555C1HR70BB01_InProduction.csv](img/GJM1555C1HR70BB01_InProduction.png) | 0.7pF | `0.408 + 2.152e-03 * tan( freq/1e9 * 9.738e-04 + 1.562 )` |
 | [GJM1555C1HR80BB01_InProduction.csv](img/GJM1555C1HR80BB01_InProduction.png) | 0.8pF | `0.435 + 2.388e-03 * tan( freq/1e9 * 9.192e-04 + 1.563 )` |
 | [GJM1555C1HR90BB01_InProduction.csv](img/GJM1555C1HR90BB01_InProduction.png) | 0.9pF | `0.462 + 4.369e-03 * tan( freq/1e9 * 1.486e-03 + 1.559 )` |
+| [GRM1554C1HR40BA01_NotRecommended.csv](img/GRM1554C1HR40BA01_NotRecommended.png) | 0.4pF | `0.277 + 4.051e-04 * tan( freq/1e9 * 3.735e-04 + 1.567 )` |
+| [GRM1554C1HR60BA01_NotRecommended.csv](img/GRM1554C1HR60BA01_NotRecommended.png) | 0.6pF | `0.349 + 1.039e-03 * tan( freq/1e9 * 5.526e-04 + 1.566 )` |
+| [GRM1554C1HR80BA01_NotRecommended.csv](img/GRM1554C1HR80BA01_NotRecommended.png) | 0.8pF | `0.390 + 3.855e-03 * tan( freq/1e9 * 1.466e-03 + 1.559 )` |
