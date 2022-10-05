@@ -6,12 +6,21 @@ note : use only simsurfing data
 | label | value | func |
 | ---   | ---   | --- |
 | [GJM1555C1H1R0BB01_InProduction.csv](img/GJM1555C1H1R0BB01_InProduction.png) | 1.0pF | `0.446 + 7.759e-03 * tan( freq/1e9 * 2.307e-03 + 1.553 )` |
-| [GJM1555C1H1R1WB01_InProduction.csv](img/GJM1555C1H1R1WB01_InProduction.png) | 1.1pF | `0.508 + 7.715e-03 * tan( freq/1e9 * 2.033e-03 + 1.555 )` |
+| [GJM1555C1H1R1BB01_InProduction.csv](img/GJM1555C1H1R1BB01_InProduction.png) | 1.1pF | `0.508 + 7.715e-03 * tan( freq/1e9 * 2.033e-03 + 1.555 )` |
 | [GJM1555C1H1R2BB01_InProduction.csv](img/GJM1555C1H1R2BB01_InProduction.png) | 1.2pF | `0.515 + 9.215e-03 * tan( freq/1e9 * 2.215e-03 + 1.554 )` |
 | [GJM1555C1H1R3BB01_InProduction.csv](img/GJM1555C1H1R3BB01_InProduction.png) | 1.3pF | `0.516 + 1.648e-02 * tan( freq/1e9 * 3.652e-03 + 1.544 )` |
 | [GJM1555C1H1R4BB01_InProduction.csv](img/GJM1555C1H1R4BB01_InProduction.png) | 1.4pF | `0.530 + 2.301e-02 * tan( freq/1e9 * 4.747e-03 + 1.536 )` |
 | [GJM1555C1H1R5BB01_InProduction.csv](img/GJM1555C1H1R5BB01_InProduction.png) | 1.5pF | `0.500 + 5.973e-02 * tan( freq/1e9 * 1.150e-02 + 1.490 )` |
 | [GJM1555C1H1R6BB01_InProduction.csv](img/GJM1555C1H1R6BB01_InProduction.png) | 1.6pF | `0.527 + 6.705e-02 * tan( freq/1e9 * 1.248e-02 + 1.486 )` |
+| [GJM1555C1H1R7BB01_InProduction.csv](img/GJM1555C1H1R7BB01_InProduction.png) | 1.7pF | `0.737 + 6.072e-02 * tan( freq/1e9 * 1.229e-02 + 1.489 )` |
+| [GJM1555C1H1R8BB01_InProduction.csv](img/GJM1555C1H1R8BB01_InProduction.png) | 1.8pF | `0.756 + 6.549e-02 * tan( freq/1e9 * 1.264e-02 + 1.488 )` |
+| [GJM1555C1H1R9BB01_InProduction.csv](img/GJM1555C1H1R9BB01_InProduction.png) | 1.9pF | `0.774 + 6.380e-02 * tan( freq/1e9 * 1.179e-02 + 1.496 )` |
+| [GJM1555C1H2R0BB01_InProduction.csv](img/GJM1555C1H2R0BB01_InProduction.png) | 2.0pF | `0.728 + 6.880e-02 * tan( freq/1e9 * 1.165e-02 + 1.498 )` |
+| [GJM1555C1H2R1BB01_InProduction.csv](img/GJM1555C1H2R1BB01_InProduction.png) | 2.1pF | `0.754 + 8.282e-02 * tan( freq/1e9 * 1.360e-02 + 1.488 )` |
+| [GJM1555C1H2R2BB01_InProduction.csv](img/GJM1555C1H2R2BB01_InProduction.png) | 2.2pF | `0.785 + 7.863e-02 * tan( freq/1e9 * 1.256e-02 + 1.496 )` |
+| [GJM1555C1H2R3BB01_InProduction.csv](img/GJM1555C1H2R3BB01_InProduction.png) | 2.3pF | `1.099 + 6.886e-02 * tan( freq/1e9 * 1.348e-02 + 1.494 )` |
+| [GJM1555C1H2R4BB01_InProduction.csv](img/GJM1555C1H2R4BB01_InProduction.png) | 2.4pF | `1.133 + 7.643e-02 * tan( freq/1e9 * 1.443e-02 + 1.490 )` |
+| [GJM1555C1H2R5BB01_InProduction.csv](img/GJM1555C1H2R5BB01_InProduction.png) | 2.5pF | `1.160 + 7.962e-02 * tan( freq/1e9 * 1.450e-02 + 1.491 )` |
 | [GJM1555C1HR10BB01_InProduction.csv](img/GJM1555C1HR10BB01_InProduction.png) | 0.1pF | `0.092 + 3.410e-05 * tan( freq/1e9 * 3.710e-04 + 1.566 )` |
 | [GJM1555C1HR20BB01_InProduction.csv](img/GJM1555C1HR20BB01_InProduction.png) | 0.2pF | `0.170 + 2.088e-04 * tan( freq/1e9 * 6.529e-04 + 1.563 )` |
 | [GJM1555C1HR30BB01_InProduction.csv](img/GJM1555C1HR30BB01_InProduction.png) | 0.3pF | `0.241 + 4.287e-04 * tan( freq/1e9 * 7.254e-04 + 1.563 )` |

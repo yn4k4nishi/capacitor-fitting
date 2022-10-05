@@ -1,10 +1,8 @@
-import sys
 import csv
 import re
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
-import glob
 
 
 def get_capacity_from_csv(file_name):
