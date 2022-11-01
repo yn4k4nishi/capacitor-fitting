@@ -9,6 +9,7 @@ note : use only simsurfing data
 | [GJM1555C1H1R1BB01_InProduction.csv](img/GJM1555C1H1R1BB01_InProduction.png) | 1.1pF | `0.508 + 7.055e-03 * tan( freq/1e9 * 1.859e-03 + 1.55603 )` |
 | [GJM1555C1H1R2BB01_InProduction.csv](img/GJM1555C1H1R2BB01_InProduction.png) | 1.2pF | `0.515 + 9.030e-03 * tan( freq/1e9 * 2.170e-03 + 1.55418 )` |
 | [GJM1555C1H1R3BB01_InProduction.csv](img/GJM1555C1H1R3BB01_InProduction.png) | 1.3pF | `0.516 + 1.642e-02 * tan( freq/1e9 * 3.638e-03 + 1.54391 )` |
+| [GJM1555C1H1R4BB01_InProduction.csv](img/GJM1555C1H1R4BB01_InProduction.png) | 1.4pF | `0.530 + 2.300e-02 * tan( freq/1e9 * 4.745e-03 + 1.53640 )` |
 | [GJM1555C1H1R7BB01_InProduction.csv](img/GJM1555C1H1R7BB01_InProduction.png) | 1.7pF | `0.737 + 6.081e-02 * tan( freq/1e9 * 1.231e-02 + 1.48854 )` |
 | [GJM1555C1H1R8BB01_InProduction.csv](img/GJM1555C1H1R8BB01_InProduction.png) | 1.8pF | `0.756 + 6.549e-02 * tan( freq/1e9 * 1.264e-02 + 1.48844 )` |
 | [GJM1555C1H1R9BB01_InProduction.csv](img/GJM1555C1H1R9BB01_InProduction.png) | 1.9pF | `0.774 + 6.378e-02 * tan( freq/1e9 * 1.178e-02 + 1.49582 )` |
