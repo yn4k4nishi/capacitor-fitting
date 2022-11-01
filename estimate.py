@@ -41,7 +41,7 @@ def fd(x, a, b, c):
     return a * np.exp(b*x) + c
 
 plt.figure(figsize=(8,8))
-plt.rcParams["font.size"] = 14
+plt.rcParams["font.size"] = 12
 plt.suptitle(r'$capacitance = a + b \ \tan(freq(GHz) \cdot c + d)$')
 
 plt.subplot(221)
@@ -80,11 +80,13 @@ popt_d, pcov = curve_fit(fd, x, d, maxfev=int(1e5))
 plt.plot(x, fd(x, *popt_d))
 print(popt_d)
 
+plt.tight_layout()
 # plt.legend()
 plt.savefig('est.png')
 # plt.show()
 
 plt.clf()
+plt.rcParams["font.size"] = 14
 
 ##### copare 'simsurfing' data #####
 import csv
@@ -133,11 +135,12 @@ f = np.linspace(1, 6, 1000)
 for c in caps:
     plt.plot(f, y(f,c), label='{} pF'.format(c))
 
-plt.rcParams["font.size"] = 14
+plt.title('simsurfing vs estimate')
 plt.xlim(1, 6)
 plt.ylim(0.5, 2)
 plt.xlabel('Frequency (GHz)')
 plt.ylabel('Capacitance (pF)')
+plt.tight_layout()
 plt.legend()
 plt.savefig('est2.png')
 # plt.show()
