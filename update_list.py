@@ -20,7 +20,7 @@ if __name__ == "__main__":
         for csv in sorted(csvs):
 
             label = csv.split('csv/')[1]
-            cap, func, img_file = fitting(csv, 2e9, 7e9)
+            cap, func, img_file = fitting(csv, 1e9, 10e9)
 
             s = '| [{}]({}) | {:.1f}pF | `{}` |\n'.format(label, img_file, cap, func)
             f.write(s)
