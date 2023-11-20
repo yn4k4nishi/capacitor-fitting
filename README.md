@@ -6,6 +6,7 @@ note : use only simsurfing data
 | label | value | func |
 | ---   | ---   | --- |
 | [GJM1555C1H1R0BB01_InProduction.csv](img/GJM1555C1H1R0BB01_InProduction.png) | 1.0pF | `0.381 + 4.215e-02 * tan( freq/1e9 * 1.148e-02 + 1.48250 )` |
+| [GJM1555C1H2R0BB01_InProduction.csv](img/GJM1555C1H2R0BB01_InProduction.png) | 2.0pF | `0.764 + 7.817e-02 * tan( freq/1e9 * 1.326e-02 + 1.48818 )` |
 | [GJM1555C1HR10BB01_InProduction.csv](img/GJM1555C1HR10BB01_InProduction.png) | 0.1pF | `0.088 + 4.483e-05 * tan( freq/1e9 * 2.608e-04 + 1.56661 )` |
 | [GJM1555C1HR20BB01_InProduction.csv](img/GJM1555C1HR20BB01_InProduction.png) | 0.2pF | `0.156 + 2.552e-04 * tan( freq/1e9 * 4.482e-04 + 1.56428 )` |
 | [GJM1555C1HR30BB01_InProduction.csv](img/GJM1555C1HR30BB01_InProduction.png) | 0.3pF | `0.214 + 4.519e-04 * tan( freq/1e9 * 4.465e-04 + 1.56483 )` |
